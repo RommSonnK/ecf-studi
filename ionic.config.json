@@ -1,0 +1,8 @@
+{
+  "name": "ECF Studi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "6377a4ca"
+}
