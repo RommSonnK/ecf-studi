@@ -1,0 +1,26 @@
+ion-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  row-gap: calc(1.5vw + 1.5vh);
+  border: #808289 solid 1px;
+  border-radius: 15px;
+  padding: calc(1.5vw + 2vh);
+  margin: calc(3vw + 2vh);
+}
+
+ion-button {
+  background: #808289;
+  border: #808289 solid 1px;
+  border-radius: 15px;
+  padding-inline: calc(1vw + 1vh);
+}
+
+ion-input {
+  width: calc(16vw + 19vh);
+  align-self: center;
+  border: #808289 solid 1px;
+  border-radius: 15px;
+  outline: none;
+}

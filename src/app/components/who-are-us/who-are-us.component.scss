@@ -1,0 +1,19 @@
+ion-list {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: calc(1vw + 0.5vh);
+  background: transparent;
+  padding: 2.5%;
+  margin: auto;
+}
+
+ion-title {
+  font-size: calc(1vw + 1vh);
+  line-height: calc(2vw + 1.5vh);
+}
+
+ion-text {
+  font-size: calc(.75vw + .5vh);
+}
