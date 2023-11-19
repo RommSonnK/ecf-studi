@@ -1,5 +1,6 @@
 ion-card {
-  width: 40vw;
+  font-size: calc(1vw + 1vh);
+  width: calc(40vw + 20vh);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -7,11 +8,29 @@ ion-card {
   row-gap: calc(.5vw + 1vh);
   border: #808289 solid 1px;
   border-radius: 15px;
-  padding: calc(1.5vw + .5vh);
+  padding: calc(1.5vw + .9vh);
   margin: calc(.5vw + 1vh) auto;
 }
 
 .container {
   display: flex;
   align-items: center;
+}
+
+@media screen and (width > 450px) {
+  ion-card {
+    width: calc(20vw + 12vh);
+  }
+  ion-title {
+    padding-inline: calc(1vw + .5vh);
+  }
+}
+
+@media screen and (width > 600px) {
+  ion-card {
+    width: calc(25vw + 12vh);
+  }
+  ion-title {
+    padding-inline: calc(2vw + .5vh);
+  }
 }

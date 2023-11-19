@@ -1,4 +1,16 @@
 .navbar {
-  position: relative;
-  padding: 0.5%;
+  color: #4854e0;
+}
+
+@media screen and (width > 500px) {
+  .navbar {
+    padding: calc(1vw + 1vh);
+  }
+  ion-button {
+    font-size: calc(1.5vw + 1.2vh);
+    font-weight: 550;
+  }
+  ion-icon {
+    width: calc(5vw + 10vh);
+  }
 }

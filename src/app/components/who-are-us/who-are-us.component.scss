@@ -1,5 +1,5 @@
 ion-list {
-  width: 90vw;
+  width: calc(50vw + 15vh);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,11 +9,45 @@ ion-list {
   margin: auto;
 }
 
+.who-are-us {
+  padding-block: calc(3vw + 2vh);
+}
+
 ion-title {
-  font-size: calc(1vw + 1vh);
+  font-size: calc(3vw + 1.5vh);
   line-height: calc(2vw + 1.5vh);
+  text-align: center;
+  margin-block: calc(1vw + 1vh);
 }
 
 ion-text {
-  font-size: calc(.75vw + .5vh);
+  font-size: calc(1.75vw + 1.5vh);
+  text-align: center;
+}
+
+@media screen and (width > 680px) {
+  section {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    background: rgba(100, 100, 100, 0.5);
+  }
+  .who-are-us {
+    grid-area: 1 / 1;
+    padding: 3%;
+  }
+  ion-list {
+    width: calc(20vw + 20vh);
+  }
+  ion-title {
+    font-size: calc(2vw + 1.5vh);
+  }
+  ion-text {
+    font-size: calc(.75vw + 1vh);
+    text-align: start;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

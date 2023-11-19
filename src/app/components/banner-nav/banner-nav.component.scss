@@ -1,27 +1,108 @@
+.form-box {
+  margin-top: calc(-6vw - 3vh);
+  padding: 0 calc(3vw + 2vh) calc(3vw + 2vh) calc(3vw + 2vh);
+}
+
 ion-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: relative;
   row-gap: calc(1.5vw + 1.5vh);
   border: #808289 solid 1px;
   border-radius: 15px;
-  padding: calc(1.5vw + 2vh);
-  margin: calc(3vw + 2vh);
+  background: rgba(100, 100, 100, 0.95);
+  padding: calc(1vw + 2vh);
 }
 
 ion-button {
-  background: #808289;
-  border: #808289 solid 1px;
+  width: auto;
+  font-size: calc(1vw + 1vh);
+  background: #4854e0;
+  border: white solid 1px;
   border-radius: 15px;
-  padding-inline: calc(1vw + 1vh);
+  padding: calc(.25vw + .25vh) calc(1vw + 1vh);
 }
 
 ion-input {
-  width: calc(16vw + 19vh);
-  align-self: center;
-  border: #808289 solid 1px;
-  border-radius: 15px;
-  outline: none;
-  --highlight-color-focused: rgba(0, 0, 0, 0);
+  width: auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0;
 }
+
+ion-input:hover {
+  background-color: rgba(10, 10, 10, 0.5);
+  border: 2px solid white;
+}
+
+
+@media screen and (width > 430px) {
+  ion-list {
+    padding: calc(2vw + 1.5vh);
+    row-gap: calc(2vw + 1.5vh);
+  }
+  ion-input {
+    width: 80%;
+  }
+  ion-button {
+    width: 35%;
+  }
+}
+
+@media screen and (width > 680px) {
+  ion-list {
+    row-gap: calc(2.5vw + 2vh);
+  }
+}
+
+@media screen and (width > 900px) {
+  section {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    grid-gap: calc(1vw + 2vh);
+    background: rgba(150, 150, 150, 0.65);
+    border: #808289 solid 1px;
+    border-radius: 15px;
+    padding: calc(1vw + 2vh) 0 calc(1vw + 2vh) calc(1vw + 2vh);
+    margin: calc(3vw + 2vh);
+  }
+  .form-box {
+    grid-area: 1 / 1;
+    margin: 0;
+    padding: 0;
+  }
+  ion-list {
+    padding: calc(1vw + .75vh);
+    row-gap: calc(1vw + 1vh);
+  }
+  ion-button {
+    width: 55%;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: calc(2.5vw + 1.5vh);
+    grid-column: 2;
+  }
+  h1 {
+    font-size: calc(1.5vw + 1vh);
+  }
+}
+
+@media screen and (width > 1200px) {
+  ion-list {
+    height: calc(20vw + 23vh);
+    padding: calc(1.5vw + 1.75vh);
+    row-gap: calc(1.5vw + 1.5vh);
+  }
+  ion-input, ion-button {
+    font-size: calc(1vw + 1.5vh);
+    height: calc(3vw + 2vh);
+  }
+}
+
+
+

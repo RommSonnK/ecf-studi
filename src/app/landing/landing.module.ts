@@ -14,6 +14,7 @@ import {CardServiceComponent} from "../components/card-service/card-service.comp
 import {WhoAreUsComponent} from "../components/who-are-us/who-are-us.component";
 import {SectionCommitComponent} from "../components/section-commit/section-commit.component";
 import {SectionContactComponent} from "../components/section-contact/section-contact.component";
+import {FooterComponent} from "../components/footer/footer.component";
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import {SectionContactComponent} from "../components/section-contact/section-con
     IonicModule,
     LandingPageRoutingModule,
   ],
-  declarations: [LandingPage, HeaderComponent, BannerNavComponent, BannerServiceComponent, CardServiceComponent, WhoAreUsComponent, SectionCommitComponent, SectionContactComponent],
+    declarations: [LandingPage, HeaderComponent, BannerNavComponent, BannerServiceComponent, CardServiceComponent, WhoAreUsComponent, SectionCommitComponent, SectionContactComponent, FooterComponent],
   exports: [
     HeaderComponent,
     BannerNavComponent,

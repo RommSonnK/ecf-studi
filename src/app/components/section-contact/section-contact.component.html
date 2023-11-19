@@ -1,18 +1,23 @@
-<div>
-  <ion-title>Laissez un commentaire</ion-title>
-</div>
+<section>
+  <ion-list class="ion-text-center">
+    <div>
+      <ion-title>Laissez un commentaire</ion-title>
+    </div>
+    <ion-row class="ion-justify-content-center">
+      <ion-input placeholder="nom"></ion-input>
+    </ion-row>
+    <ion-row id="row-large" class="ion-justify-content-center">
+      <ion-input id="input-large" placeholder="commentaire"></ion-input>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-input placeholder="objet/note"></ion-input>
+    </ion-row>
+    <ion-buttons class="ion-justify-content-center" slot="end">
+      <ion-button color="secondary" size="medium" fill="solid" shape="round">envoyer</ion-button>
+    </ion-buttons>
+  </ion-list>
 
-<ion-list class="ion-text-center">
-  <ion-row class="ion-justify-content-center">
-    <ion-input placeholder="nom"></ion-input>
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-input placeholder="commentaire"></ion-input>
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-input placeholder="objet/note"></ion-input>
-  </ion-row>
-  <ion-buttons class="ion-justify-content-center" slot="end">
-    <ion-button size="medium">envoyer</ion-button>
-  </ion-buttons>
-</ion-list>
+  <div class="container">
+    <ion-img src="assets/CallUs.PNG" alt="" width="100%"></ion-img>
+  </div>
+</section>

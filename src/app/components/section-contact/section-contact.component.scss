@@ -1,0 +1,86 @@
+ion-list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: calc(1.5vw + 1.5vh);
+  border: #808289 solid 2px;
+  background: rgba(100, 100, 100, 0.95);
+  padding: calc(1vw + 2vh);
+  margin: 0 auto;
+}
+
+ion-button {
+  width: auto;
+  font-size: calc(1vw + 1vh);
+}
+
+ion-title {
+  font-size: calc(2vw + 1.5vh);
+}
+
+ion-input {
+  width: calc(26vw + 19vh);
+  height: calc(2vw + 4vh);
+  font-size: calc(1vw + 1.5vh);
+  font-weight: 500;
+  align-self: center;
+  border: white solid 1px;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0;
+  --highlight-color-focused: rgba(255, 255, 255, 1);
+  --highlight-height: 0px;
+}
+
+ion-input:hover {
+  background-color: rgba(10, 10, 10, 0.5);
+  border: 2px solid white;
+}
+
+#row-large {
+  height: calc(15vw + 8vh);
+}
+
+#input-large {
+  height: 100%;
+}
+
+.container {
+  padding: 5%;
+}
+
+@media screen and (width > 650px) {
+  ion-input {
+    width: calc(36vw + 26vh);
+  }
+}
+
+@media screen and (width > 900px) {
+  section {
+    display: flex;
+    padding: calc(1vw + 2vh) 0 calc(1vw + 2vh) calc(1vw + 2vh);
+    margin: calc(3vw + 2vh);
+    background: rgba(150, 150, 150, 0.65);
+    border-radius: 15px;
+  }
+  ion-list {
+    width: 65%;
+    background: rgba(100, 100, 100, 0.95);
+    border-radius: 15px;
+  }
+  ion-title {
+    font-size: calc(1vw + 1.5vh);
+  }
+  ion-input {
+    width: calc(18vw + 16vh);
+    height: calc(2vw + 2vh);
+  }
+  #row-large {
+    height: calc(7vw + 6vh);
+  }
+  .container {
+    padding: 3%;
+  }
+}
