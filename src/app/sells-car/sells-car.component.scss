@@ -1,0 +1,169 @@
+* {
+  color: white;
+}
+
+h4, h3 {
+  text-align: center;
+  margin: 0;
+  padding-block: calc(.5vw + .5vh);
+}
+
+h1 {
+  background: var(--ion-color-dark);
+  text-align: center;
+  margin: 0;
+  padding-block: calc(.5vw + .5vh);
+}
+
+a {
+  color: var(--ion-color-secondary);
+}
+
+section {
+  width: auto;
+  height: fit-content;
+  padding: calc(3vw + 5vh);
+  background: var(--ion-color-primary);
+}
+
+.box {
+  border: 1px solid white;
+  border-radius: 15px;
+  background: var(--ion-color-dark);
+  overflow: hidden;
+}
+
+.sells-filter {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(1vw + .5vh);
+  width: calc(15vw + 20vh);
+  height: auto;
+  padding: calc(1vw + .5vh);
+  border-right: 1px solid white;
+}
+
+ion-input {
+  height: auto;
+  align-self: center;
+  border-radius: 10px;
+  background: var(--ion-color-success);
+  color: var(--ion-color-primary);
+  opacity: 30%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.div-input div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: calc(1vw + .5vh);
+  padding: 3.5%;
+}
+
+.sells-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: calc(.8vw + .8vh);
+  column-gap: calc(.8vw + .8vh);
+  width: 100%;
+  padding: calc(.8vw + .8vh);
+  height: max-content;
+  border: none;
+  background: var(--ion-color-dark)
+}
+
+.sells-cars {
+  width: calc(15vw + 10vh);
+  height: fit-content;
+  border: 1px solid white;
+}
+
+.card-cars {
+  width: calc(19.5vw + .5vh);
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-contents {
+  padding-inline: 5%;
+}
+
+.sells-content {
+  display: flex;
+  border-top: 1px solid white;
+}
+
+ion-img {
+  width: auto;
+  height: calc(6vw + 6vh)
+}
+
+.card-obj {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+
+.voir-plus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#card-border-none {
+  border: none;
+}
+
+@media screen and (width < 1200px) {
+  .box {
+    max-width: calc(55vw + 35vh);
+    margin: 0 auto;
+  }
+  .sells-box {
+    justify-content: space-around;
+    align-content: space-around;
+    row-gap: calc(1.8vw + 1.8vh);
+    padding: calc(1.8vw + 1.8vh);
+  }
+}
+@media screen and (width < 1050px) {
+  .card-cars {
+    width: calc(19.5vw + 5.5vh);
+    height: calc(17vh + 16vw);
+  }
+  .card-contents {
+    font-size: calc(1vw + .7vh);
+    align-self: center;
+  }
+}
+@media screen and (width < 840px) {
+  section {
+    padding: calc(1.5vw + 2vh);
+  }
+  .sells-box {
+    padding: calc(.8vw + .8vh);
+  }
+}
+@media screen and (width < 630px) {
+  .sells-content {
+    display: block;
+    justify-content: center;
+  }
+  .sells-filter {
+    width: auto;
+    border: none;
+  }
+  .card-cars {
+    width: calc(25vw + 7vh);
+    height: auto;
+  }
+}
+@media screen and (width < 470px) {
+  .card-cars {
+    width: calc(25vw + 17vh);
+  }
+}
