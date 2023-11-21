@@ -39,10 +39,12 @@
       </div>
 
       <div class="sells-box">
-        <div *ngFor="let vehicle of vehicles; index as i">
-          <app-sells-car-card *ngIf="filtering(vehicle)" [photo]="vehicle.photo" [description]="vehicle.description" [years]="vehicle.years"
-          [price]="vehicle.price" [kilometer]="vehicle.kilometer"></app-sells-car-card>
-        </div>
+        <ng-container *ngFor="let vehicle of vehicles; index as i">
+          <app-sells-car-card *ngIf="filtering(vehicle)"
+                              [photo]="vehicle.photo?vehicle.photo:'../../../assets/vehicle_sample.jpg'"
+                              [description]="vehicle.description" [years]="vehicle.annee"
+                              [price]="vehicle.prix" [kilometer]="vehicle.kilometrage"></app-sells-car-card>
+        </ng-container>
       </div>
     </div>
   </div>

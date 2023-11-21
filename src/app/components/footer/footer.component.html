@@ -7,7 +7,9 @@
         <ion-text>numéro : 06 58 10 96 00</ion-text>
       </ion-row>
       <div>
-        <p>Actuellement<a class="a-open">Ouvert</a><a class="a-close">Fermer</a></p>
+        <p>Actuellement<a class="a-open" *ngIf="openedService.mechanicIsOpened">Ouvert</a><a class="a-close"
+                                                                                             *ngIf="!openedService.mechanicIsOpened">Fermer</a>
+        </p>
       </div>
     </div>
 

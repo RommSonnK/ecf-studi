@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { LandingPageRoutingModule } from './landing-routing.module';
+import {LandingPageRoutingModule} from './landing-routing.module';
 
-import { LandingPage } from './landing.page';
+import {LandingPage} from './landing.page';
 import {HeaderComponent} from "../components/header/header.component";
 import {BannerNavComponent} from "../components/banner-nav/banner-nav.component";
 import {BannerServiceComponent} from "../components/banner-service/banner-service.component";
@@ -24,7 +24,7 @@ import {SectionCommitCardComponent} from "../components/section-commit-card/sect
     IonicModule,
     LandingPageRoutingModule,
   ],
-    declarations: [LandingPage, HeaderComponent, BannerNavComponent, BannerServiceComponent, CardServiceComponent, WhoAreUsComponent, SectionCommitComponent, SectionContactComponent, FooterComponent, SectionCommitCardComponent],
+  declarations: [LandingPage, HeaderComponent, BannerNavComponent, BannerServiceComponent, CardServiceComponent, WhoAreUsComponent, SectionCommitComponent, SectionContactComponent, FooterComponent, SectionCommitCardComponent],
     exports: [
         HeaderComponent,
         BannerNavComponent,

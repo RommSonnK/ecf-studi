@@ -40,7 +40,7 @@ p {
 
 .a-close {
   width: fit-content;
-  display: none;
+  display: flex;
   padding-inline: calc(2vw + 1.5vh);
   color: rgba(215, 11, 64, 0.85);
 }

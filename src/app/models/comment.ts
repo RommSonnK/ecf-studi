@@ -1,5 +1,6 @@
 export class Comment {
-  user: string = "";
-  avis: string = "";
+  id: number = 0;
+  nom: string = "";
+  commentaireText: string = "";
   note: number = 0
 }

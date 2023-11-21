@@ -1,7 +1,11 @@
 export class Vehicle {
-  photo: string = '';
-  description: string = '';
-  years: number = 0;
-  kilometer: number = 0;
-  price: number = 0;
+  id: number = 0;
+  annee: number = 0;
+  caracteristiques: string = "";
+  description: string = "";
+  equipement: string = "";
+  kilometrage: number = 0;
+  option: string = "";
+  photo: string = "";
+  prix: number = 0;
 }

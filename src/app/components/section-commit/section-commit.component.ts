@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Comment} from "../../models/comment";
+import {CommentService} from "../../services/comment.service";
 
 @Component({
   selector: 'app-section-commit',
@@ -8,45 +9,14 @@ import {Comment} from "../../models/comment";
 })
 export class SectionCommitComponent  implements OnInit {
 
-  comments: Comment[] = [
-    {
-      user: "Romson",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 3
-    },
-    {
-      user: "Garou",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 4
-    },
-    {
-      user: "Jason",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 3
-    },
-    {
-      user: "Gerard",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 2
-    },
-    {
-      user: "Magalie",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 5
-    },
-    {
-      user: "Michael",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 1
-    },
-    {
-      user: "Dimitri",
-      avis: "Service entretiens, réparations et mise en en route",
-      note: 1
-    }
-  ]
+  comments: Comment[] = []
 
-  constructor() { }
+  constructor(commentService: CommentService) {
+    commentService.getCommentList().subscribe((data) => {
+      console.log(data);
+      this.comments = data;
+    });
+  }
 
   ngOnInit() {}
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {OpenedService} from "../../services/opened.service";
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent  implements OnInit {
 
-  constructor() { }
+  openedService: OpenedService;
+
+  constructor(openedService: OpenedService) {
+    this.openedService = openedService;
+  }
 
   ngOnInit() {}
 

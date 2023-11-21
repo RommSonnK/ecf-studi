@@ -1,7 +1,8 @@
 <div class="comment-slider">
   <div style="display: inline-flex;">
     <div *ngFor="let comment of comments; index as i" style="padding-inline: 15px">
-      <app-section-commit-card [user]="comment.user" [avis]="comment.avis" [note]="comment.note"></app-section-commit-card>
+      <app-section-commit-card [user]="comment.nom" [avis]="comment.commentaireText"
+                               [note]="comment.note"></app-section-commit-card>
     </div>
   </div>
 </div>
