@@ -1,16 +1,7 @@
-<div style="padding-block: calc(3vw + 2vh)">
-  <ion-card>
-    <div class="container">
-      <ion-icon name="person-outline" size="large"></ion-icon>
-      <ion-title>Avis</ion-title>
+<div class="comment-slider">
+  <div style="display: inline-flex;">
+    <div *ngFor="let comment of comments; index as i" style="padding-inline: 15px">
+      <app-section-commit-card [user]="comment.user" [avis]="comment.avis" [note]="comment.note"></app-section-commit-card>
     </div>
-    <div>
-      <p>Service entretiens, réparations et mise en en route</p>
-    </div>
-    <div>
-      <div>
-        <p>3 / 4 - super</p>
-      </div>
-    </div>
-  </ion-card>
+  </div>
 </div>

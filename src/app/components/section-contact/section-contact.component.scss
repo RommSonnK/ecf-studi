@@ -5,19 +5,11 @@ ion-list {
   flex-direction: column;
   justify-content: space-around;
   row-gap: calc(1.5vw + 1.5vh);
-  border: #808289 solid 2px;
-  background: rgba(100, 100, 100, 0.95);
   padding: calc(1vw + 2vh);
   margin: 0 auto;
-}
-
-ion-button {
-  width: auto;
-  font-size: calc(1vw + 1vh);
-}
-
-ion-title {
-  font-size: calc(2vw + 1.5vh);
+  background: var(--ion-color-medium);
+  border: var(--ion-color-secondary) solid 1px;
+  border-inline: none;
 }
 
 ion-input {
@@ -26,7 +18,7 @@ ion-input {
   font-size: calc(1vw + 1.5vh);
   font-weight: 500;
   align-self: center;
-  border: white solid 1px;
+  border: 1px solid var(--ion-color-success);
   border-radius: 10px;
   background-color: transparent;
   padding: 0;
@@ -34,9 +26,27 @@ ion-input {
   --highlight-height: 0px;
 }
 
-ion-input:hover {
-  background-color: rgba(10, 10, 10, 0.5);
-  border: 2px solid white;
+ion-button {
+  width: auto;
+  font-size: calc(1vw + 1vh);
+  border-radius: 15px;
+  border: none;
+  background: var(--ion-color-secondary);
+  overflow: hidden;
+}
+
+ion-title {
+  font-size: calc(2vw + 1.5vh);
+}
+
+ion-text {
+  font-size: calc(1.4vw + 1vh);
+  font-weight: 500;
+  text-align: center;
+ }
+
+ion-button, ion-input:hover {
+  border: 2px solid var(--ion-color-warning);
 }
 
 #row-large {
@@ -48,7 +58,7 @@ ion-input:hover {
 }
 
 .container {
-  padding: 5%;
+  padding-inline: 15%;
 }
 
 @media screen and (width > 650px) {
@@ -56,19 +66,19 @@ ion-input:hover {
     width: calc(36vw + 26vh);
   }
 }
-
 @media screen and (width > 900px) {
   section {
     display: flex;
     padding: calc(1vw + 2vh) 0 calc(1vw + 2vh) calc(1vw + 2vh);
-    margin: calc(3vw + 2vh);
-    background: rgba(150, 150, 150, 0.65);
+    margin:0 calc(3vw + 2vh) calc(3vw + 2vh) calc(3vw + 2vh);
+    background: var(--ion-color-tertiary);
+    border: var(--ion-color-warning) solid 1px;
     border-radius: 15px;
   }
   ion-list {
     width: 65%;
-    background: rgba(100, 100, 100, 0.95);
     border-radius: 15px;
+    border-inline: var(--ion-color-secondary) solid 1px;
   }
   ion-title {
     font-size: calc(1vw + 1.5vh);

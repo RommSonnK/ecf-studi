@@ -1,0 +1,78 @@
+.card-cars {
+  width: calc(18vw + .5vh);
+  height: 100%;
+  border-radius: 10px;
+  color: white;
+  margin-block: 0;
+}
+
+.card-contents {
+  padding-top: 0;
+}
+
+.card-obj {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-block: 3%;
+}
+
+.voir-plus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#card-border-none {
+  border: none;
+}
+
+@media screen and (width < 1050px) {
+  .card-cars {
+    width: calc(19vw + 6vh);
+  }
+  .card-contents {
+    font-size: calc(1vw + .7vh);
+    align-self: center;
+  }
+}
+
+@media screen and (width < 650px) {
+  .card-cars {
+    width: calc(25vw + 8vh);
+  }
+}
+
+@media screen and (width < 500px) {
+  .card-cars {
+    width: calc(25vw + 20vh);
+  }
+}
+
+@media screen and (width < 360px) {
+  .card-cars {
+    width: calc(10vw + 20vh);
+  }
+}
+
+ion-input{
+  width: auto;
+  border: 1px solid var(--ion-color-success);
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0;
+}
+
+ion-input:hover {
+  border: 2px solid var(--ion-color-warning);
+}
+
+ion-text {
+  color: var(--ion-color-dark);
+}
+
+ion-item {
+  padding-block: calc(1vw + 1vh);
+}

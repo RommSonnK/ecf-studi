@@ -8,7 +8,8 @@ import { SellsPageRoutingModule } from './sells-routing.module';
 
 import { SellsPage } from './sells.page';
 import {LandingPageModule} from "../landing/landing.module";
-import {SellsCarComponent} from "../sells-car/sells-car.component";
+import {SellsCarComponent} from "../components/sells-car/sells-car.component";
+import {SellsCarCardComponent} from "../components/sells-car-card/sells-car-card.component";
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import {SellsCarComponent} from "../sells-car/sells-car.component";
     SellsPageRoutingModule,
     LandingPageModule
   ],
-  declarations: [SellsPage, SellsCarComponent]
+  declarations: [SellsPage, SellsCarComponent, SellsCarCardComponent]
 })
 export class SellsPageModule {}

@@ -1,28 +1,46 @@
+.repair-vehicle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  column-gap: calc(2vw + 3vh);
+  row-gap: calc(2vw + 2.5vh);
+  padding-block: calc(3vw + 2vh);
+}
+
 ion-card {
   font-size: calc(1vw + 1vh);
-  width: calc(40vw + 20vh);
+  width: calc(10vw + 12vh);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: relative;
   row-gap: calc(.5vw + 1vh);
-  border: #808289 solid 1px;
-  border-radius: 15px;
-  padding: calc(1.5vw + .9vh);
+  padding: calc(1vw + .9vh);
   margin: calc(.5vw + 1vh) auto;
+  background: var(--ion-color-medium);
+  border: var(--ion-color-warning) solid 1px;
+  -webkit-box-shadow: 2px 2px 7px 2px rgba(103,108,207,0.55);
+  box-shadow: 2px 2px 7px 2px rgba(103,108,207,0.55);
+  border-radius: 15px;
 }
 
-.container {
+.container, div, p {
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
-@media screen and (width > 450px) {
-  ion-card {
-    width: calc(20vw + 12vh);
-  }
-  ion-title {
-    padding-inline: calc(1vw + .5vh);
+ion-text {
+  padding-inline: 0;
+  font-size: calc(1vw + 1vh);
+  text-align: center;
+}
+
+@media screen and (width > 500px) {
+  .repair-vehicle {
+    flex-wrap: nowrap;
+    padding-inline: calc(1vw + 1.5vh);
   }
 }
 
@@ -30,7 +48,13 @@ ion-card {
   ion-card {
     width: calc(25vw + 12vh);
   }
-  ion-title {
-    padding-inline: calc(2vw + .5vh);
+  ion-text {
+    padding-inline: calc(.5vw + 1vh);
+  }
+}
+
+@media screen and (width > 880px) {
+  ion-card {
+    width: calc(18vw + 12vh);
   }
 }

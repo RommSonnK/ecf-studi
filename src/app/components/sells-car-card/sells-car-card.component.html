@@ -1,0 +1,57 @@
+<ion-card color="dark" class="card-cars">
+  <ion-img [src]="photo" alt=""></ion-img>
+  <ion-card-content class="card-contents">
+    <div class="card-obj">
+      <p>{{description}}</p>
+    </div>
+    <div class="card-obj">
+      <div>
+        <p>{{years}}</p>
+      </div>
+      <div>
+        <p>{{kilometer}} KM</p>
+      </div>
+    </div>
+    <div class="card-obj" id="card-border-none">
+      <div>
+        <p>{{price}} €</p>
+      </div>
+      <div class="voir-plus">
+        <a (click)="setOpen(true)">En savoir plus</a>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-modal #details [isOpen]="isContactOpen" backdrop-dismiss="false">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="medium">
+        <ion-title color="dark">Annonce - {{description}}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)" color="dark">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div>
+        <ion-text>Nom</ion-text>
+        <ion-item>
+          <ion-input placeholder="Prénom NOM"></ion-input>
+        </ion-item>
+        <ion-text>Numéro</ion-text>
+        <ion-item>
+          <ion-input placeholder="+33000000000" type="number"></ion-input>
+        </ion-item>
+        <ion-text>Mail</ion-text>
+        <ion-item>
+          <ion-input placeholder="email@domain.com"></ion-input>
+        </ion-item>
+        <ion-text>message</ion-text>
+        <ion-item>
+          <ion-input placeholder="Votre Message..."></ion-input>
+        </ion-item>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

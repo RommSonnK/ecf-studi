@@ -15,6 +15,7 @@ import {WhoAreUsComponent} from "../components/who-are-us/who-are-us.component";
 import {SectionCommitComponent} from "../components/section-commit/section-commit.component";
 import {SectionContactComponent} from "../components/section-contact/section-contact.component";
 import {FooterComponent} from "../components/footer/footer.component";
+import {SectionCommitCardComponent} from "../components/section-commit-card/section-commit-card.component";
 
 @NgModule({
   imports: [
@@ -23,12 +24,14 @@ import {FooterComponent} from "../components/footer/footer.component";
     IonicModule,
     LandingPageRoutingModule,
   ],
-    declarations: [LandingPage, HeaderComponent, BannerNavComponent, BannerServiceComponent, CardServiceComponent, WhoAreUsComponent, SectionCommitComponent, SectionContactComponent, FooterComponent],
-  exports: [
-    HeaderComponent,
-    BannerNavComponent,
-    BannerServiceComponent,
-    CardServiceComponent
-  ]
+    declarations: [LandingPage, HeaderComponent, BannerNavComponent, BannerServiceComponent, CardServiceComponent, WhoAreUsComponent, SectionCommitComponent, SectionContactComponent, FooterComponent, SectionCommitCardComponent],
+    exports: [
+        HeaderComponent,
+        BannerNavComponent,
+        BannerServiceComponent,
+        CardServiceComponent,
+        SectionContactComponent,
+        FooterComponent
+    ]
 })
 export class LandingPageModule {}

@@ -9,34 +9,32 @@ ion-list {
   flex-direction: column;
   justify-content: space-around;
   row-gap: calc(1.5vw + 1.5vh);
-  border: #808289 solid 1px;
-  border-radius: 15px;
-  background: rgba(100, 100, 100, 0.95);
   padding: calc(1vw + 2vh);
+  border: var(--ion-color-secondary) solid 1px;
+  border-radius: 15px;
+  background: var(--ion-color-medium);
 }
 
 ion-button {
   width: auto;
   font-size: calc(1vw + 1vh);
-  background: #4854e0;
-  border: white solid 1px;
   border-radius: 15px;
-  padding: calc(.25vw + .25vh) calc(1vw + 1vh);
+  border: none;
+  background: var(--ion-color-secondary);
+  overflow: hidden;
 }
 
 ion-input {
   width: auto;
-  border: 1px solid white;
+  border: 1px solid var(--ion-color-success);
   border-radius: 10px;
   background-color: transparent;
   padding: 0;
 }
 
-ion-input:hover {
-  background-color: rgba(10, 10, 10, 0.5);
-  border: 2px solid white;
+ion-button, ion-input:hover {
+  border: 2px solid var(--ion-color-warning);
 }
-
 
 @media screen and (width > 430px) {
   ion-list {
@@ -50,23 +48,28 @@ ion-input:hover {
     width: 35%;
   }
 }
-
 @media screen and (width > 680px) {
   ion-list {
     row-gap: calc(2.5vw + 2vh);
   }
 }
-
 @media screen and (width > 900px) {
   section {
     display: grid;
     grid-template: auto / 1fr 1fr;
     grid-gap: calc(1vw + 2vh);
-    background: rgba(150, 150, 150, 0.65);
-    border: #808289 solid 1px;
-    border-radius: 15px;
     padding: calc(1vw + 2vh) 0 calc(1vw + 2vh) calc(1vw + 2vh);
     margin: calc(3vw + 2vh);
+    background: var(--ion-color-tertiary);
+    border: var(--ion-color-warning) solid 1px;
+    border-radius: 15px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: calc(2.5vw + 1.5vh);
+    grid-column: 2;
   }
   .form-box {
     grid-area: 1 / 1;
@@ -77,21 +80,13 @@ ion-input:hover {
     padding: calc(1vw + .75vh);
     row-gap: calc(1vw + 1vh);
   }
-  ion-button {
-    width: 55%;
-  }
-  .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    row-gap: calc(2.5vw + 1.5vh);
-    grid-column: 2;
-  }
   h1 {
     font-size: calc(1.5vw + 1vh);
   }
+  ion-button {
+    width: 55%;
+  }
 }
-
 @media screen and (width > 1200px) {
   ion-list {
     height: calc(20vw + 23vh);

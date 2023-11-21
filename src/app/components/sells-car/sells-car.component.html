@@ -1,0 +1,49 @@
+<section>
+  <div class="box">
+    <div>
+      <h1>Vente de Vehicules</h1>
+    </div>
+    <div class="sells-content">
+
+      <div class="sells-filter">
+        <div class="filter-scroll ion-align-items-center">
+          <div class="div-input">
+            <h3>Filtrer vos Vehicules</h3>
+            <div>
+              <ion-input [(ngModel)]="nameFilter" type="text" placeholder="nom"></ion-input>
+            </div>
+          </div>
+          <div class="div-input">
+            <h4>Prix</h4>
+            <div>
+              <ion-input [(ngModel)]="priceMinFilter" type="number" placeholder="min"></ion-input>
+              <ion-input [(ngModel)]="priceMaxFilter" type="number" placeholder="max"></ion-input>
+            </div>
+          </div>
+          <div class="div-input">
+            <h4>Année</h4>
+            <div>
+              <ion-input [(ngModel)]="yearsMinFilter" type="number" placeholder="min"></ion-input>
+              <ion-input [(ngModel)]="yearsMaxFilter" type="number" placeholder="max"></ion-input>
+            </div>
+          </div>
+          <div class="div-input">
+            <h4>Kilométrages</h4>
+            <div>
+              <ion-input [(ngModel)]="kilometerMinFilter" type="number" placeholder="min"></ion-input>
+              <ion-input [(ngModel)]="kilometerMaxFilter
+" type="number" placeholder="max"></ion-input>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sells-box">
+        <div *ngFor="let vehicle of vehicles; index as i">
+          <app-sells-car-card *ngIf="filtering(vehicle)" [photo]="vehicle.photo" [description]="vehicle.description" [years]="vehicle.years"
+          [price]="vehicle.price" [kilometer]="vehicle.kilometer"></app-sells-car-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
